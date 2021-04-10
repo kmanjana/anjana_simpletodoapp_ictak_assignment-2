@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/mainpg.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<style>
+   body {
+display: block;
+position: relative;
+backdrop-filter: brightness(10%);
+
+}
+body::after {
+  background-image: url(image/backg4.jpg);
+  content: "";
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ml9 {
+  
+  font-weight: 400;
+  font-size: 8em;
+  color: bisque;
+  text-align: center;
+}
+
+.ml9 .text-wrapper {
+  
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+.card{
+  background-color: rgba(255, 255, 255, 0.267);
+  min-height: 16rem;
+}
+.card-img{
+  min-height: 16rem;
+}
+.card-title{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.747);
+    color:white;
+    padding: 20px;
+}
+.card:hover{
+  transform: scale(1.09);
+}
+
+</style>
+<body >
+  <!-- header -->
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <img src="image/logo.jpg" height="35" alt="logo" style="backdrop-filter: brightness(40%);">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="navli "><a  href="todolist.html" >Todo List <span class="sr-only">(current)</span></a></li>
+        <li class="navli"><a href="index.html">LogOut</a></li>
+        <li class="navli"><a href="#">About</a></li>
+      </ul>
+    </div>
+  </nav><br>
+</header>
+  <!-- ./header -->
+  
+<h1 class="ml9">
+  <span class="text-wrapper">
+    <span class="letters">WELCOME!</span>
+  </span>
+</h1>
+
+<h2 class="font-weight-light" style="font-size:5rem; text-align: center;color: white;">CATEGORIES</h2><br>
+<div style="margin-left: 10%;margin-right: 10%;">
+  <div class="card-deck">
+    <div class="card ">
+      <img class="card-img" src="image/work.svg" alt="Card image">
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Work</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="image/health.svg" alt="Card image cap" >
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Health  </h5>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img " src="image/vacation.svg" alt="Card image cap">
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Vacation  </h5>
+      </div>
+    </div>
+  </div><br>
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img" src="image/meeting.svg" alt="Card image cap" >
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Meeting </h5>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="image/cooking.png" alt="Card image cap" style="min-height: 16rem;">
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Cooking  </h5>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="image/ideas.svg" alt="Card image cap">
+      <div class="card-img-overlay"><br><br><br><br><br><br>
+        <h5 class="card-title cattitle">Ideas</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+ <!-- footer -->
+<div class="footer">
+  <footer id="footer">
+    <p style="color: white;text-align: center;padding-top: 5px;"><br>© All right Reversed.</p>
+  </footer>
+</div> 
+<!-- ./Footer -->  
+
+<script src="javascript/api.js"></script>
+<script>
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline()
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  });
+</script>
+</body>
+</html>

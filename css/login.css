@@ -1,0 +1,22 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    margin-top: 11%;
+    height: auto;
+    width: 50%;
+}
+.logheading{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.651);
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 5%;
+    
+}
+.imgbackg{
+    height: 400px;
+    width:130% ; 
+    margin-top: 12%;
+  }

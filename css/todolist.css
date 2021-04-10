@@ -1,0 +1,43 @@
+.inp {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: white;
+    width: 100%;
+    font-size: 20px;
+  }
+   #loader{
+      color:rgb(60, 29, 61);
+  }
+  #loading{
+     color:rgb(60, 29, 61);
+     font-size: 30px;
+  }
+  td{
+    text-align: center;
+    font-size: 18px;
+  }
+  td.topic{
+    text-align: left;
+  }
+  th{
+    font-size: 20px;
+    background-color: #241529;
+    color: white;
+  }
+  .delete{
+    background-color: rgb(228, 50, 50);
+    border-radius: 5px;
+    width: 50%;
+    border: none;
+  }
+  .fa-trash{
+    color: rgb(255, 255, 255);
+  }
+  #top{
+      font-size: 18px;
+  }
+#bottom{
+    font-size: 18px;
+}
